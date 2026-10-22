@@ -1,0 +1,62 @@
+# .NET build output, including nested projects
+**/[Bb]in/
+**/[Oo]bj/
+**/[Aa]rtifacts/
+**/[Pp]ublish/
+**/[Ll]ogs/
+**/[Tt]est[Rr]esult*/
+**/BenchmarkDotNet.Artifacts/
+**/Generated\ Files/
+
+# IDE and editor user state
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.swp
+*.swo
+*~
+
+# Keep shared .vscode settings and launch configurations trackable.
+
+# NuGet and MSBuild artifacts
+*.nupkg
+*.snupkg
+*.binlog
+*.buildlog
+project.lock.json
+project.fragment.lock.json
+
+# Test and coverage reports
+*.coverage
+*.coveragexml
+**/coverage/
+coverage.*
+CodeCoverage/
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Local secrets and environment files (retain example templates)
+.env
+.env.*
+!.env.example
+!.env.*.example
+secrets.json
+appsettings.*.Local.json
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Temporary files
+~$*
+
+docker-compose-override.yml
+
+# for docker compose development
+.containers
