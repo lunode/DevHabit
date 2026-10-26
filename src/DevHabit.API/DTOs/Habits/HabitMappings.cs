@@ -5,7 +5,6 @@ namespace DevHabit.API.DTOs.Habits;
 
 internal static class HabitMappings
 {
-
     public static readonly SortMappingDefinition<HabitDto, Habit> SortMapping = new()
     {
         Mappings = [
@@ -119,7 +118,7 @@ internal static class HabitMappings
             LastCompletedAtUtc = h.LastCompletedAtUtc
         };
     }
-    public static HabitDto ToHabitWithTagsDto(this Habit h)
+    public static HabitWithTagsDto ToHabitWithTagsDto(this Habit h)
     {
         return new HabitWithTagsDto
         {

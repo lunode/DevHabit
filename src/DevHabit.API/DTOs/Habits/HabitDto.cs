@@ -1,15 +1,9 @@
+using DevHabit.API.DTOs.Common;
 using DevHabit.API.Entities;
-using Newtonsoft.Json;
 
 namespace DevHabit.API.DTOs.Habits;
 
-public sealed record HabitWithTagsDto : HabitDto
-{
-    // 默认 Tags 会在 JSON 序列化的第一个字段，使其排在最末
-    [JsonProperty(Order = int.MaxValue)]
-    public string[] Tags { get; init; }
-}
-public record HabitDto
+public record HabitDto : ILinkReponse
 {
     public required string Id { get; init; }
     public required string Name { get; init; }
@@ -24,6 +18,8 @@ public record HabitDto
     public required DateTime CreatedAtUtc { get; init; }
     public DateTime? UpdatedAtUtc { get; init; }
     public DateTime? LastCompletedAtUtc { get; init; }
+
+    public List<LinkDto> Links { get; set; }
 }
 
 public sealed record FrequencyDto
