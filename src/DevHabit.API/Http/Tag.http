@@ -1,0 +1,34 @@
+@uri = http://localhost:5179
+
+@tagId = t_01a16812-bf4a-78d9-a44f-b18b6b2a2af3
+### Get tags
+GET {{uri}}/tags
+
+### Get tag by ID
+GET {{uri}}/tags/{{tagId}}
+
+### Create tag
+POST {{uri}}/tags
+Content-Type: application/json
+
+{
+  "Name": "Tag1",
+  "Description": "LonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglong"
+  "Description": "LonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglong"
+  "Description": "LonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglong"
+  "Description": "LonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglong"
+  "Description": "LonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglong"
+  "Description": "LonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglongLonglonglong"
+}
+
+### Update tag
+PUT  {{uri}}/tags/{{tagId}}
+Content-Type: application/json
+
+{
+  "Name": "TagA(Updated)",
+  "Description":"This is a updated desc."
+}
+
+### Delete tag
+DELETE {{uri}}/tags/{{tagId}}

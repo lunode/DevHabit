@@ -1,0 +1,70 @@
+@uri = http://localhost:5179
+
+
+@habitId = h_0196173a-f742-711f-89c4-53ec26a271bc
+### Get habits
+GET {{uri}}/habits?page=1&pageSize=3&fields=id,name,description
+Accept: application/json
+
+
+### GET habits by ID
+GET {{uri}}/habits/{{habitId}}?fields=id,name,description,frequency,target,status,tags
+
+### Create a habit
+POST {{uri}}/habits
+Content-Type: application/json
+
+{
+  "name": "Daily Coding",
+  "description": null,
+  "type": 2,
+  "frequency": {
+    "type": 1,
+    "timesPerPeriod": 1
+  },
+  "target": {
+    "value": 30,
+    "unit": "minutes"
+  }
+}
+
+### Update a habit
+PUT {{uri}}/habits/{{habitId}}
+Content-Type: application/json
+
+{
+  "name": "Daily Coding",
+  "description": "This is a updated descirption",
+  "type": 2,
+  "frequency": {
+    "type": 1,
+    "timesPerPeriod": 1
+  },
+  "target": {
+    "value": 30,
+    "unit": "minutes"
+  },
+  "milestone": {
+    "target": 100
+  }
+}
+
+### Patch a habit
+PATCH {{uri}}/habits/{{habitId}}
+Content-Type: application/json
+
+[
+  {
+    "op": "replace",
+    "path": "/name",
+    "value": "Daily Coding (Pacthed)"
+  },
+  {
+    "op": "replace",
+    "path": "/description",
+    "value": "This is a patched decription"
+  }
+]
+
+### Delete a habit
+DELETE {{uri}}/habits/{{habitId}}

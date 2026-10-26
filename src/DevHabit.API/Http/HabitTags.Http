@@ -1,0 +1,25 @@
+@uri = http://localhost:5179
+@habitTagUri = http://localhost:5179/habits
+@habitId = h_0196173a-f742-711f-89c4-53ec26a271bc
+@tagId = t_01a16817-93ed-7af5-a7a0-b02135f57e37
+
+### Get habits
+GET {{uri}}/habits
+Accept: application/json
+### Get tags
+GET {{uri}}/tags
+
+### Upsert habit tags
+PUT {{habitTagUri}}/{{habitId}}/tags
+Content-Type: application/json
+
+{
+  "tagIds": [
+    "t_01a16817-93ed-7af5-a7a0-b02135f57e37",
+    "t_01a16916-6245-7677-9f4d-bb8d69ffe241"
+  ]
+}
+
+
+### Remove habit tags
+DELETE {{habitTagUri}}/{{habitId}}/tags/{{tagId}}

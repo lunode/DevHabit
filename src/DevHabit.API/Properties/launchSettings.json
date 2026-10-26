@@ -8,19 +8,19 @@
       "applicationUrl": "http://localhost:5179",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:5341/ingest/otlp",
-        "OTEL_EXPORTER_OTLP_PROTOCOL": "http/protobuf"
+        "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:18889",
+        "OTEL_EXPORTER_OTLP_PROTOCOL": "grpc"
       }
     },
-    "http-aspire": {
+    "http-seq": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
       "applicationUrl": "http://localhost:5179",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:18889",
-        "OTEL_EXPORTER_OTLP_PROTOCOL": "grpc"
+        "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:5341/ingest/otlp",
+        "OTEL_EXPORTER_OTLP_PROTOCOL": "http/protobuf"
       }
     },
     "https": {

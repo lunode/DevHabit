@@ -6,7 +6,7 @@
 
     <!-- 开启隐式 Using 和 可空检查 -->
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>false</Nullable>
 
     <!-- 启用最高级别的静态代码分析规则 -->
     <AnalysisLevel>latest</AnalysisLevel>
